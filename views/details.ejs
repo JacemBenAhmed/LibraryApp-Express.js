@@ -1,0 +1,27 @@
+<%- include('parts/header.ejs')%>
+<br>
+<br><br><br><br>
+
+<div class="container text-center">
+    <div class="row">
+        <% if (book) { %> <!-- Check if book exists -->
+            <div class="col">
+                <img src="/images/sport1.jpg">
+            </div>
+            <div class="col">
+                <h2><%= book.title %></h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi et placeat repudiandae a repellendus expedita earum tempora nemo, nesciunt repellat voluptates! Perferendis laboriosam voluptatum doloribus voluptatibus repellendus consequuntur possimus. Et?</p>
+
+                <h6>Author: <%= book.author %></h6>
+                <h5>Price: <%= book.price %></h5>
+            </div>
+        <% } else { %>
+            <div class="col">
+                <p>Book not found or not available.</p>
+            </div>
+        <% } %>
+    </div>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<%- include('parts/footer.ejs')%>
